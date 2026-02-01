@@ -1,0 +1,335 @@
+@import url('reset.css');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --white-color: #FFFFFF;
+    --blue-color: #2196F3;
+    --grey-color: #757575;
+    --dark-color: #212121;
+    --light-grey-color: #E0E0E0;
+    --border-color: #EEEEEE;
+    --footer-bg-color: #2F303A;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 215px;
+    border-bottom: 1px solid #E0E0E0;
+}
+.header {
+    display: flex;
+    justify-content: space-between; 
+}
+.header-item {
+    display: flex;
+    align-items: center;
+    gap: 95px;
+}
+.header-logo {
+    margin: 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.header-link{
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    gap: 50px;
+}
+
+.blue {
+    color: var(--blue-color);
+}
+.grey {
+    color: var(--grey-color);
+}
+.footer {
+    background-color: var(--footer-bg-color);
+    padding: 60px 215px;    
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap : 20px;
+}
+.footer-title  {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.footer-title address {
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.footer-title a {
+    line-height: 24px;
+}
+button{
+    width: 200px;
+    height: 50px;
+    border: none;
+    padding: 6px 27px;
+    font-size: 16px;
+    line-height: 26px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+button:hover {
+    background-color: var(--blue-color);
+    cursor: pointer;
+    color: var(--white-color);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.24) ;
+}
+
+
+.button-main {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+  display: flex;;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu a {
+    display: block;
+  color: var(--grey-color);
+  text-decoration: none;
+  padding: 15px 20px;
+  white-space: nowrap;
+}
+.blue {
+    color: var(--blue-color)!important;
+}
+.main-menu a:hover {
+  color: var(--blue-color);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.233);
+  z-index: 10;
+  background: var(--white-color);
+}
+
+.dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.submenu-right {
+    display: none;
+  top: 0;
+  left: 100%;                 
+  color: var(--grey-color);     
+}
+
+.dropdown-submenu:hover > .submenu-right {
+  display: block;
+}
+
+.dropdown-submenu > a::after {
+  content: " ▶";
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+.dropdown-content,
+.submenu-right {
+  transition: opacity 0.15s ease;
+}
+
+.dropdown:hover > .dropdown-content,
+.dropdown-submenu:hover > .submenu-right {
+  opacity: 1;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+}
+.title {
+    background: #E0E0E0 url('../img/img-1.png') no-repeat 
+    50%/cover;
+    width: 100%;
+    height: 37.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 60px;
+    color:var(--white-color);
+}  
+
+.container-2 h2{ 
+    width:270px;
+    font-size: 14px;
+    font-weight: 700;
+    height: 16px;
+    line-height: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    
+}
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+}
+.container-img {
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    padding: 25px 100px;
+}
+.container-2 p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--grey-color);
+}
+
+.section {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    gap: 30px;
+    padding: 94px 0;
+}
+.box-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.container-3 h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.box-img {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('../img/img-6.png') ;
+    width: 370px;
+    height: 70px;
+    width: 370px;
+    height: 294px;
+
+}
+
+.box-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(47, 48, 58, 0.8);
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-size: 14px;
+    padding: 27px 99px 27px 100px;
+}
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+.section-2 h1 {
+    width: 316px;
+    height: 42px;
+    color: var(--dark-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 20px;
+}
+.container-3 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.box-img {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 370px;
+    height: 294px;
+}
+.img-1 {
+    background-image: url('../img/img-6.png') ;
+}
+.img-2 {
+    background-image: url('../img/img-7.png') ;
+}
+.img-3 {
+    background-image: url('../img/img-8.png') ;
+}
